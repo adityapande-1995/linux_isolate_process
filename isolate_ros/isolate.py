@@ -110,7 +110,7 @@ def main():
         exit(-1)
 
     if not create_linux_namespaces():
-        die("Failed to fully create isolated environment")
+        error("Failed to fully create isolated environment")
 
     os.execv(sys.argv[1], sys.argv[1:])
 
