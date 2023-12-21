@@ -3,7 +3,9 @@ Isolates any given process using the unshare system call. Suited for ROS, though
 Since the system call is linux specific, this would not work on Windows.
 This can be really useful for running a large number of tests in parallel wihtout having them interacting with each other.
 
-This is similar to ROS domain IDs, though domain IDs are limited by the number of ports you have, and this approach is more scalable. 
+This is similar to ROS domain IDs, though domain IDs are limited by the number of ports you have, and this approach is more scalable.
+
+Originally added in [drake-ros](https://github.com/RobotLocomotion/drake-ros)
 
 # Installation and usage
 ```
