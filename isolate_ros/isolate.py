@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import ctypes
 import os
+import sys
 
 # Constants
 CLONE_NEWUSER = 0x10000000
@@ -103,7 +104,8 @@ def create_linux_namespaces():
     return True
 
 def main():
-    import sys
+    if os.name != 'posix':
+        error("Not suported on non posix systems")
 
     if len(sys.argv) < 2:
         print("shim must be given a command to execute")
