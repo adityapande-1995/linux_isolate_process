@@ -1,8 +1,8 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
     name="isolate_ros",
     version="0.1.0",
-    packages=["isolate_ros"],
-    scripts=["isolate_ros/isolate.py"],
+    packages=find_packages(),
+    install_requires=[],
 )
