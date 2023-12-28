@@ -18,7 +18,7 @@ pip install isolate-ros
 isolate_ros <your command>
 ```
 
-For example, to run an isolated talker (Note : any ros inside the ``bash -c "(<command>)" will be able to talk to each other) : 
+For example, to run an isolated talker (Note : any ros nodes inside the ``bash -c "(<command>)"`` will be able to talk to each other) : 
 ```
 isolate_ros /bin/bash -c "ros2 run demo_nodes_cpp talker"
 ```
