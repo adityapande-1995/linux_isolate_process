@@ -1,5 +1,5 @@
 # isolate-ros
-Isolates any given process using the unshare system call. Suited for ROS, though can work for any process.
+Isolates any given process using the ``unshare()`` system call. Suited for ROS, though can work for any process.
 Since the system call is linux specific, this would not work on Windows.
 This can be really useful for running a large number of tests in parallel wihtout having them interacting with each other.
 
@@ -13,7 +13,7 @@ git clone https://github.com/adityapande-1995/isolate-ros.git
 pip install isolate-ros
 ```
 
-### 1. This command can now be used as a commaline tool: 
+### 1. This command can now be used as a commandline tool: 
 ```
 isolate_ros <your command>
 ```
