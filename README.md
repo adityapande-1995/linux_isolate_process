@@ -13,7 +13,7 @@ git clone https://github.com/adityapande-1995/isolate-ros.git
 pip install isolate-ros
 ```
 
-1. This command can now be used as a commaline tool: 
+### 1. This command can now be used as a commaline tool: 
 ```
 isolate_ros <your command>
 ```
@@ -28,7 +28,7 @@ ros2 run demo_nodes_cpp listener
 ```
 it will not receive any of the messages published by the talker.
 
-2. This can also be used as a module, to isolate the current process:
+### 2. This can also be used as a module, to isolate the current process:
 ```
 Python 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0] on linux
 Type "help", "copyright", "credits" or "license" for more information.
