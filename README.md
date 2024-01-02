@@ -1,4 +1,4 @@
-# isolate-ros
+# linux-isolate-process
 Isolates any given process using the ``unshare()`` system call. Suited for ROS, though can work for any process.
 Since the system call is linux specific, this would not work on Windows.
 This can be really useful for running a large number of tests in parallel wihtout having them interacting with each other.
@@ -9,18 +9,18 @@ Originally added in [drake-ros](https://github.com/RobotLocomotion/drake-ros)
 
 # Installation and usage
 ```
-git clone https://github.com/adityapande-1995/isolate-ros.git
-pip install isolate-ros
+git clone https://github.com/adityapande-1995/linux-isolate-process
+pip install linux-isolate-process
 ```
 
 ### 1. This command can now be used as a commandline tool: 
 ```
-isolate_ros <your command>
+linux_isolate_process <your command>
 ```
 
 For example, to run an isolated talker (Note : any ros nodes inside the ``bash -c "(<command>)"`` will be able to talk to each other) : 
 ```
-isolate_ros /bin/bash -c "ros2 run demo_nodes_cpp talker"
+linux_isolate_process /bin/bash -c "ros2 run demo_nodes_cpp talker"
 ```
 If you open another terminal and run a listener normally, using
 ```
@@ -32,7 +32,7 @@ it will not receive any of the messages published by the talker.
 ```
 Python 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0] on linux
 Type "help", "copyright", "credits" or "license" for more information.
->>> import isolate_ros as i
+>>> import linux_isolate_process as i
 >>> i.create_linux_namespaces()
 True
 ```
