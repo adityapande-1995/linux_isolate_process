@@ -1,0 +1,17 @@
+[project]
+name = "linux_isolate_process"
+version = "0.1.0"
+authors = [
+  { name="Aditya Pande", email="adityapande@google.com" },
+]
+description = "A package to isolate linux processes"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache-2.0 License",
+    "Operating System :: Linux",
+]
+
+[project.urls]
+Homepage = "https://github.com/adityapande-1995/linux-isolate-process"
