@@ -9,7 +9,7 @@ Originally added in [drake-ros](https://github.com/RobotLocomotion/drake-ros)
 
 # Installation and usage
 
-### From PYPI
+### From [PYPI](https://pypi.org/project/linux-isolate-process/)
 ```
 pip install linux-isolate-process
 ```
