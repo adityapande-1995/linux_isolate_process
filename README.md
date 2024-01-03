@@ -8,9 +8,17 @@ This is similar to ROS domain IDs, though domain IDs are limited by the number o
 Originally added in [drake-ros](https://github.com/RobotLocomotion/drake-ros)
 
 # Installation and usage
+
+### From PYPI
+```
+pip install linux-isolate-process
+```
+
+### From source
 ```
 git clone https://github.com/adityapande-1995/linux-isolate-process
-pip install linux-isolate-process
+cd linux-isolate-process
+pip install .
 ```
 
 ### 1. This command can now be used as a commandline tool: 
