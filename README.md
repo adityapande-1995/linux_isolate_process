@@ -1,4 +1,4 @@
-# linux-isolate-process
+# linux_isolate_process
 Isolates any given process using the ``unshare()`` system call. Suited for ROS, though can work for any process.
 Since the system call is linux specific, this would not work on Windows.
 This can be really useful for running a large number of tests in parallel wihtout having them interacting with each other.
@@ -9,15 +9,15 @@ Originally added in [drake-ros](https://github.com/RobotLocomotion/drake-ros)
 
 # Installation
 
-### 1. From [PYPI](https://pypi.org/project/linux-isolate-process/)
+### 1. From [PYPI](https://pypi.org/project/linux_isolate_process/)
 ```
-pip install linux-isolate-process
+pip install linux_isolate_process
 ```
 
 ### 2. From source
 ```
-git clone https://github.com/adityapande-1995/linux-isolate-process
-cd linux-isolate-process
+git clone https://github.com/adityapande-1995/linux_isolate_process
+cd linux_isolate_process
 pip install .
 ```
 
