@@ -3,8 +3,8 @@
 <package format="3">
   <name>linux_isolate_process</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
-  <maintainer email="adityapande@todo.todo">adityapande</maintainer>
+  <description>A tool to isolate ros2 nodes</description>
+  <maintainer email="adityapande@intrinsic.ai">adityapande</maintainer>
   <license>Apache-2.0</license>
 
   <test_depend>ament_copyright</test_depend>
