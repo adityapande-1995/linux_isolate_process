@@ -9,22 +9,22 @@ Originally added in [drake-ros](https://github.com/RobotLocomotion/drake-ros)
 
 # Installation
 
-### 1. From [PYPI](https://pypi.org/project/linux_isolate_process/)
-```
-pip install linux_isolate_process
-```
+This is a python ROS2 package, and requires colcon to be installed.
 
-### 2. From source
+### 1. From source
 ```
+mkdir ~/my_ws
+cd ~/my_ws ; mkdir src ; cd src
 git clone https://github.com/adityapande-1995/linux_isolate_process
-cd linux_isolate_process
-pip install .
+cd ~/my_ws
+colcon build
 ```
 
 # Usage
 
 ### 1. This command can now be used as a commandline tool: 
 ```
+source ~/my_ws/install/setup.bash
 linux_isolate_process <your command>
 ```
 
