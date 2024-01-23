@@ -25,12 +25,15 @@ colcon build
 ### 1. This command can now be used as a commandline tool: 
 ```
 source ~/my_ws/install/setup.bash
-ros2 run linux_isolate_process linux_isolate_process <your command>
+python3 -m linux_isolate_process <your command>
+
+# For e.g., to get a bash shell that is isolated
+python3 -m linux_isolate_process /bin/bash
 ```
 
 For example, to run an isolated talker (Note : any ros nodes inside the ``bash -c "(<command>)"`` will be able to talk to each other) : 
 ```
-ros2 run linux_isolate_process linux_isolate_process /bin/bash -c "ros2 run demo_nodes_cpp talker"
+python3 -m linux_isolate_process /bin/bash -c "ros2 run demo_nodes_cpp talker"
 ```
 If you open another terminal and run a listener normally, using
 ```
@@ -40,7 +43,7 @@ it will not receive any of the messages published by the talker.
 However, if you run the talker and listener in the same process, they will be able to talk to each other.
 That is, this should work perfectly fine :
 ```
-ros2 run linux_isolate_process linux_isolate_process /bin/bash -c "ros2 run demo_nodes_cpp talker & ros2 run demo_nodes_cpp listener"
+python3 -m linux_isolate_process /bin/bash -c "ros2 run demo_nodes_cpp talker & ros2 run demo_nodes_cpp listener"
 ```
 
 The talker and listener in this case are "isolated together", and hence can talk to each other.
