@@ -115,6 +115,3 @@ def main():
         error("Failed to fully create isolated environment")
 
     os.execv(sys.argv[1], sys.argv[1:])
-
-if __name__ == "__main__":
-    main()
