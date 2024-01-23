@@ -25,18 +25,25 @@ colcon build
 ### 1. This command can now be used as a commandline tool: 
 ```
 source ~/my_ws/install/setup.bash
-linux_isolate_process <your command>
+ros2 run linux_isolate_process linux_isolate_process <your command>
 ```
 
 For example, to run an isolated talker (Note : any ros nodes inside the ``bash -c "(<command>)"`` will be able to talk to each other) : 
 ```
-linux_isolate_process /bin/bash -c "ros2 run demo_nodes_cpp talker"
+ros2 run linux_isolate_process linux_isolate_process /bin/bash -c "ros2 run demo_nodes_cpp talker"
 ```
 If you open another terminal and run a listener normally, using
 ```
 ros2 run demo_nodes_cpp listener
 ```
 it will not receive any of the messages published by the talker.
+However, if you run the talker and listener in the same process, they will be able to talk to each other.
+That is, this should work perfectly fine :
+```
+ros2 run linux_isolate_process linux_isolate_process /bin/bash -c "ros2 run demo_nodes_cpp talker & ros2 run demo_nodes_cpp listener"
+```
+
+The talker and listener in this case are "isolated together", and hence can talk to each other.
 
 ### 2. This can also be used as a module, to isolate the current process:
 ```
@@ -45,5 +52,6 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> import linux_isolate_process as i
 >>> i.create_linux_namespaces()
 True
+>>> # Any ros2 nodes run here would be isolated
 ```
 

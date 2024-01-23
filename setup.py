@@ -19,7 +19,7 @@ setup(
     license='Apache-2.0',
     tests_require=['pytest'],
     entry_points={
-        'console_scripts': [
+        'console_scripts': ['linux_isolate_process = linux_isolate_process.isolate:main',
         ],
     },
 )
