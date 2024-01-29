@@ -2,8 +2,8 @@
 Changelog for package linux_isolate_process
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.2 (2024-01-29)
+------------------
 * 0.0.1
 * Removed entry points
 * Added main
